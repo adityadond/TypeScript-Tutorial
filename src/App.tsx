@@ -14,6 +14,7 @@ import MutableRef from './Components/refs/MutableRef';
 import Counter from './Components/class/Counter';
 import { Private } from './Components/auth/Private';
 import Profile from './Components/auth/Profile';
+import List from './Components/generics/List';
 
 function App() {
   const personName={
@@ -67,6 +68,11 @@ function App() {
       <Counter message="count value is"/>
       <h1>-----------------------------</h1>
       <Private isLoggedIn={true} component={Profile}/>
+      <h1>-----------------------------</h1>
+      <List items={["Batman","superman","wonder w"]}
+      onClick={(item)=>console.log(item)}/>
+      <List items={[1,2,3,4,5]}
+      onClick={(item)=>console.log(item)}/>
     </div>
     
   );
